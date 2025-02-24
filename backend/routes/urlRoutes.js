@@ -13,7 +13,7 @@ router.post("/shorten", async (req, res) => {
     }
     return res
       .status(200)
-      .json({ shortUrl: `http://localhost:5000/${url.shortId}` });
+      .json({ shortUrl: `https://discord-bot-55kw.onrender.com/${url.shortId}` });
   } catch (error) {
     return res.status(500).json({ error });
   }

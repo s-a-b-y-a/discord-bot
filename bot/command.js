@@ -29,7 +29,7 @@ const rest = new REST({ version: "10" }).setToken(
   try {
     console.log("Started refreshing application (/) commands.");
 
-    await rest.put(Routes.applicationCommands(process.env.DISCORD_BOT_ID), {
+    await rest.put(Routes.applicationGuildCommands(process.env.DISCORD_BOT_ID,'1343209691223687238'), {
       body: commands,
     });
 

@@ -17,6 +17,8 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
 
 const PORT = process.env.PORT || 3000; 
 
+app.get('/', (req,res) => res.send('Backend is Running'));
+
 app.listen(PORT, "0.0.0.0", () => {  
   console.log(`Server is running on port ${PORT}`);
 });

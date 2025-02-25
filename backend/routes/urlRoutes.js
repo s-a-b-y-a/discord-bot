@@ -5,6 +5,7 @@ const router = express.Router();
 
 router.post("/shorten", async (req, res) => {
   const { originalUrl } = req.body;
+  console.log(originalUrl)
   try {
     let url = await URL.findOne({ originalUrl });
     if (!url) {
